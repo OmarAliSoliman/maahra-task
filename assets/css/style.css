@@ -37,6 +37,125 @@ button {
   transition: all 0.3s;
 }
 
+.sidenav {
+  height: 100%;
+  width: 300px;
+  max-width: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: -400px;
+  background-color: #fff;
+  box-shadow: 0 22px 22px rgba(0, 0, 0, 0.05);
+  overflow-x: hidden;
+  padding-top: 30px;
+  transition: 0.5s;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.sidenav li {
+  margin-bottom: 20px;
+  text-align: right;
+}
+.sidenav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  transition: 0.3s;
+  padding-right: 56px;
+}
+.sidenav a:hover {
+  color: #a68049;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+.sidenav .closebtn i {
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+  background-color: #a68049;
+  color: #fff !important;
+  line-height: 40px;
+}
+.sidenav .logo {
+  width: 254px;
+  margin-bottom: 29px;
+  margin-top: 39px;
+}
+.sidenav .NesteListParent {
+  position: relative;
+}
+.sidenav .NesteListParent i {
+  position: absolute;
+  left: 10px;
+  color: #444;
+  font-size: 14px;
+}
+.sidenav .sideMenue {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  padding-right: 20px;
+  display: none;
+}
+.sidenav .sideMenue li {
+  font-weight: bold;
+  padding-right: 20px;
+  display: block;
+}
+.sidenav .sideMenue li a {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  padding-right: 0;
+  padding-right: 20px;
+}
+.sidenav .sideMenue li a::before {
+  position: absolute;
+  content: "-";
+  right: 0;
+}
+.sidenav .lang {
+  margin-top: 22px;
+  direction: rtl;
+  margin-right: 55px;
+}
+.sidenav .lang select {
+  width: 72px;
+  height: 38px;
+  padding: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid #b2b2b2;
+  color: #b2b2b2;
+}
+
+.openMenuActive {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-sidenavOpen {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -105,12 +224,13 @@ button {
 .navbar .navbar-links ul .dropMenueParent .dropMenueDiv {
   background-color: #fff;
   min-width: 200px;
-  max-width: 800px;
+  max-width: 700px;
+  display: flex;
   padding: 0;
   position: absolute;
   top: 30px;
   left: 50%;
-  transform: translate(-50%, 0) scale(0.4);
+  transform: translate(-50%, 0) scale(0.9);
   border-radius: 5px;
   padding: 5px;
   opacity: 0;
@@ -132,7 +252,10 @@ button {
 .navbar .navbar-links ul .dropMenueParent:hover .dropMenueDiv {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0) scale(1);
+  transform: translate(-50%, 0) translateY(10px) scale(1);
+}
+.navbar .navbarIcon {
+  display: none;
 }
 
 .header .swiper-container {
@@ -333,7 +456,8 @@ button {
   margin-left: 15px;
   margin-right: 15px;
 }
-.latest-news .slick-prev, .latest-news .slick-next {
+.latest-news .slick-prev,
+.latest-news .slick-next {
   border: 1px solid #757575;
   border-radius: 50%;
   width: 37px;
@@ -344,8 +468,9 @@ button {
   justify-content: center;
   top: 100%;
 }
-.latest-news .slick-prev::before, .latest-news .slick-next::before {
-  color: #834C28;
+.latest-news .slick-prev::before,
+.latest-news .slick-next::before {
+  color: #834c28;
 }
 .latest-news .slick-prev {
   left: 20px;
@@ -370,11 +495,17 @@ button {
   content: "";
   font-weight: 900;
 }
-.latest-news .slick-prev:hover, .latest-news .slick-prev:focus, .latest-news .slick-next:hover, .latest-news .slick-next:focus {
+.latest-news .slick-prev:hover,
+.latest-news .slick-prev:focus,
+.latest-news .slick-next:hover,
+.latest-news .slick-next:focus {
   background-color: #a68049;
   border: 1px solid #a68049;
 }
-.latest-news .slick-prev:hover::before, .latest-news .slick-prev:focus::before, .latest-news .slick-next:hover::before, .latest-news .slick-next:focus::before {
+.latest-news .slick-prev:hover::before,
+.latest-news .slick-prev:focus::before,
+.latest-news .slick-next:hover::before,
+.latest-news .slick-next:focus::before {
   color: #fff;
 }
 .latest-news .latest-head {
@@ -385,11 +516,11 @@ button {
 }
 .latest-news .latest-head h6 {
   font-size: 24px;
-  color: #D1CECB;
+  color: #d1cecb;
 }
 .latest-news .latest-head h5 {
   font-size: 50px;
-  color: #8D8A87;
+  color: #8d8a87;
 }
 .latest-news .latest-head a {
   width: 134px;
@@ -397,7 +528,7 @@ button {
   border: 1px solid #a68049;
   display: flex;
   margin-top: 25px;
-  background-color: #FDFBF7;
+  background-color: #fdfbf7;
   height: 40px;
   padding-right: 15px;
   align-items: center;
@@ -449,7 +580,7 @@ button {
 .news-card .card-img .circle-parent .circle {
   position: relative;
   bottom: 0;
-  border: 20px solid #F0E9E2;
+  border: 20px solid #f0e9e2;
   left: 50%;
   transform: translate(-50%, 0);
   width: 260px;
@@ -489,7 +620,7 @@ button {
   width: 150px;
   height: 150px;
   background-color: #a68049;
-  border: 20px solid #F0E9E2;
+  border: 20px solid #f0e9e2;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -553,7 +684,8 @@ button {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .latest-news .row .col-lg-2, .latest-news .row .col-lg-10 {
+  .latest-news .row .col-lg-2,
+.latest-news .row .col-lg-10 {
     padding-right: 1px !important;
     padding-left: 1px !important;
   }
@@ -573,7 +705,10 @@ button {
   }
 
   .navbar .navbar-links .navbarIcon {
+    display: block;
     margin-top: 25px;
+    position: relative;
+    z-index: 999;
   }
   .navbar .navbar-links .navbarIcon i {
     width: 40px;
@@ -609,14 +744,16 @@ button {
     margin-top: 30px;
   }
 
-  .header .swiper-slide-duplicate-active .description, .header .swiper-slide-active .description {
+  .header .swiper-slide-duplicate-active .description,
+.header .swiper-slide-active .description {
     font-size: 50px;
   }
 }
 /* Small Screens */
 /* Mobile & Tablets */
 @media (max-width: 767px) {
-  .header .swiper-container .leftImg .left-div, .navbar .top-navbar .social-links {
+  .header .swiper-container .leftImg .left-div,
+.navbar .top-navbar .social-links {
     display: none;
   }
 
@@ -628,7 +765,8 @@ button {
     margin-top: 45px !important;
   }
 
-  .header .swiper-slide-duplicate, .header .swiper-slide {
+  .header .swiper-slide-duplicate,
+.header .swiper-slide {
     padding-bottom: 100px;
   }
 
@@ -636,7 +774,8 @@ button {
     bottom: 20px;
   }
 
-  .header .swiper-slide-duplicate, .header .swiper-slide {
+  .header .swiper-slide-duplicate,
+.header .swiper-slide {
     padding-top: 180px;
   }
 }
@@ -655,6 +794,13 @@ button {
 .navbar .navbar-links ul .dropMenueParent::after, .latest-news .slick-prev::before, .latest-news .slick-next::before, .news-card .card-img .circle-parent .arrow {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+.sidenav .closebtn i, .sidenav .lang {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

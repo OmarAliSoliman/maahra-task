@@ -16,6 +16,21 @@
 
 <body>
 
+  <div class="bg-sidenavOpen"></div>
+
+  <div id="mySidenav" class="sidenav">
+    <img class="logo" src="./assets/images/logo.png" alt="">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <i class="fas fa-times"></i>
+    </a>
+    <ul class="side-nav-links list-unstyled">
+      <li><a href="">من نحن</a></li>
+      <li><a href="">الخدمات الالكترونية</a></li>
+      <li><a href="">علاقات المساهمين</a></li>
+      <li><a href="">المركز الاعلامي</a></li>
+    </ul>
+  </div>
+
 
   <!-- navbar -->
   <div class="navbar">
@@ -47,7 +62,9 @@
               </ul>
             </div>
           </li>
-          <li class="dropMenueParent"><a href="">الخدمات الالكترونية</a></li>
+          <li class="dropMenueParent">
+            <a href="">الخدمات الالكترونية</a>
+          </li>
           <li class="dropMenueParent"><a href="">علاقات المساهمين</a></li>
           <li class="dropMenueParent"><a href="">المركز الاعلامي</a></li>
           <li><a href="">بوابات</a></li>
@@ -55,7 +72,7 @@
           <li><a href="">بوابة الموظفين</a></li>
         </ul>
         <div class="navbarIcon">
-          <a href="" onclick="openNav()">
+          <a onclick="openNav()">
             <i class="fas fa-bars"></i>
           </a>
         </div>
