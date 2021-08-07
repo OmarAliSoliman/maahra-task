@@ -107,7 +107,13 @@ $(document).ready(function () {
         left: e.offsetX,
         top: e.offsetY,
         visibility: 'visible',
-        opacity: '.5'
+        opacity: '.4'
+      })
+    })
+    $('.news-card .card-body').mouseleave(function(e){
+      $(this).find('.circleMouse').css({
+        visibility: 'hidden',
+        opacity: '0'
       })
     })
   }
