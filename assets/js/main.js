@@ -105,7 +105,9 @@ $(document).ready(function () {
     $('.news-card .card-body').mousemove(function(e){
       $(this).find('.circleMouse').css({
         left: e.offsetX,
-        top: e.offsetY
+        top: e.offsetY,
+        visibility: 'visible',
+        opacity: '.5'
       })
     })
   }

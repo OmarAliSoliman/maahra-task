@@ -576,6 +576,7 @@ button {
   width: fit-content;
   transition: all 0.5s ease-in-out;
   bottom: -300px;
+  z-index: 1000;
 }
 .news-card .card-img .circle-parent .circle {
   position: relative;
@@ -587,6 +588,7 @@ button {
   height: 260px;
   background-color: #a68049;
   border-radius: 50%;
+  z-index: 1000;
 }
 .news-card .card-img .circle-parent .arrow {
   content: "";
@@ -602,6 +604,7 @@ button {
   position: absolute;
   top: -20px;
   left: 50%;
+  z-index: 1000;
   transform: translate(-50%, 0) scale(0.5);
   transition: all 0.3s ease-in-out !important;
   transition-delay: 0.5 !important;
@@ -616,16 +619,16 @@ button {
   transition: all 0.5s ease-in-out;
 }
 .news-card .card-img .card-body .circleMouse {
+  visibility: hidden;
+  opacity: 0;
   width: 150px;
   height: 150px;
   background-color: #a68049;
   border: 20px solid #f0e9e2;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0.4;
-  z-index: 99;
+  z-index: 1 !important;
 }
 .news-card .card-img .card-date {
   color: #a68049;
@@ -633,6 +636,8 @@ button {
   margin: 0;
   margin-bottom: 10px;
   font-weight: normal;
+  position: relative;
+  z-index: 9;
 }
 .news-card .card-img .card-title {
   font-size: 18px;
@@ -641,6 +646,8 @@ button {
   font-weight: 600;
   line-height: 30px;
   transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 9;
 }
 .news-card:hover .card-img .circle-parent {
   bottom: -200px;

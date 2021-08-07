@@ -620,6 +620,8 @@ button {
       transition: all 0.5s ease-in-out;
       // display: flex;
       bottom: -300px;
+      z-index: 1000;
+
       .circle {
         // display: block;
         position: relative;
@@ -631,6 +633,7 @@ button {
         height: 260px;
         background-color: $mainColor;
         border-radius: 50%;
+        z-index: 1000;
       }
       .arrow {
         content: "\f060";
@@ -647,6 +650,7 @@ button {
         position: absolute;
         top: -20px;
         left: 50%;
+        z-index: 1000;
         // opacity: 0;
         // visibility: hidden;
         transform: translate(-50%, 0) scale(0.5);
@@ -666,16 +670,16 @@ button {
       transition: all 0.5s ease-in-out;
       .circleMouse {
         // display: none;
+        visibility: hidden;
+        opacity: 0;
         width: 150px;
         height: 150px;
         background-color: $mainColor;
         border: 20px solid #f0e9e2;
         border-radius: 50%;
         position: absolute;
-        top: 0;
-        left: 0;
         opacity: 0.4;
-        z-index: 99;
+        z-index: 1 !important;
         // transition: all .1s ease-in-out;
       }
     }
@@ -685,6 +689,8 @@ button {
       margin: 0;
       margin-bottom: 10px;
       font-weight: normal;
+      position: relative;
+      z-index: 9;
     }
     .card-title {
       font-size: 18px;
@@ -693,6 +699,8 @@ button {
       font-weight: 600;
       line-height: 30px;
       transition: all 0.5s ease-in-out;
+      position: relative;
+      z-index: 9;
     }
   }
   &:hover {
