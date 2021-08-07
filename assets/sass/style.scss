@@ -68,7 +68,7 @@ button {
     font-size: 18px;
     color: #000;
     transition: 0.3s;
-    padding-right: 56px;
+    padding-right: 10px;
     &:hover {
       color: $mainColor;
     }
@@ -90,7 +90,7 @@ button {
     }
   }
   .logo {
-    width: 254px;
+    width: 150px;
     margin-bottom: 29px;
     margin-top: 39px;
     // padding: 10px;
@@ -780,7 +780,7 @@ button {
   .navbar .navbar-links {
     .navbarIcon {
       display: block;
-      margin-top: 25px;
+      margin-top: 45px;
       position: relative;
       z-index: 999;
       i {
@@ -840,9 +840,30 @@ button {
   }
   .navbar {
     .navbarIcon {
-      margin-top: 45px !important;
+      margin-top: 75px !important;
     }
   }
+
+  .sidenav{
+    .social-links{
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      .lang{
+        margin-top: 0;
+      }
+      li{
+        margin-right: 0;
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        a{
+          padding: 0;
+        }
+      }
+    }
+  }
+
   .header .swiper-slide-duplicate,
   .header .swiper-slide {
     padding-bottom: 100px;

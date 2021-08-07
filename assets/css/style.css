@@ -62,7 +62,7 @@ button {
   font-size: 18px;
   color: #000;
   transition: 0.3s;
-  padding-right: 56px;
+  padding-right: 10px;
 }
 .sidenav a:hover {
   color: #a68049;
@@ -82,7 +82,7 @@ button {
   line-height: 40px;
 }
 .sidenav .logo {
-  width: 254px;
+  width: 150px;
   margin-bottom: 29px;
   margin-top: 39px;
 }
@@ -713,7 +713,7 @@ button {
 
   .navbar .navbar-links .navbarIcon {
     display: block;
-    margin-top: 25px;
+    margin-top: 45px;
     position: relative;
     z-index: 999;
   }
@@ -769,7 +769,25 @@ button {
   }
 
   .navbar .navbarIcon {
-    margin-top: 45px !important;
+    margin-top: 75px !important;
+  }
+
+  .sidenav .social-links {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sidenav .social-links .lang {
+    margin-top: 0;
+  }
+  .sidenav .social-links li {
+    margin-right: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .sidenav .social-links li a {
+    padding: 0;
   }
 
   .header .swiper-slide-duplicate,
