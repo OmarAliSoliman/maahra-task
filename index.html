@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./assets/css/bootstrap-ar.min.css">
   <link rel="stylesheet" href="./assets/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/swiper.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
@@ -35,14 +37,28 @@
       </div>
       <div class="navbar-links">
         <ul class="list-unstyled">
-          <li class="dropMenue"><a href="">من نحن</a></li>
-          <li class="dropMenue"><a href="">الخدمات الالكترونية</a></li>
-          <li class="dropMenue"><a href="">علاقات المساهمين</a></li>
-          <li class="dropMenue"><a href="">المركز الاعلامي</a></li>
+          <li class="dropMenueParent">
+            <a href="">من نحن</a>
+            <div class="dropMenueDiv">
+              <ul>
+                <li><a href="">الاختيار الاول</a></li>
+                <li><a href="">الاختيار الثاني</a></li>
+                <li><a href="">الاختيار الثالث</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropMenueParent"><a href="">الخدمات الالكترونية</a></li>
+          <li class="dropMenueParent"><a href="">علاقات المساهمين</a></li>
+          <li class="dropMenueParent"><a href="">المركز الاعلامي</a></li>
           <li><a href="">بوابات</a></li>
           <li><a href="">الفروع</a></li>
           <li><a href="">بوابة الموظفين</a></li>
         </ul>
+        <div class="navbarIcon">
+          <a href="" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -50,10 +66,30 @@
 
   <!-- swiper slider -->
   <div class="header">
-    <div class="swiper-container">
+    <div class="swiper-container headerSwiper">
       <!-- Additional required wrapper -->
       <div class="leftImg">
         <img src="./assets/images/left image.png" alt="">
+        <div class="left-div">
+          <div class="links">
+            <a href="#">التوظيف</a>
+            <a href="#">منصة الاستقطاب</a>
+          </div>
+          <div class="customer">
+            <!-- <i class="fas fa-headphones"></i> -->
+            <img src="./assets/images/head-phone.png" class="headphone" alt="">
+            <p>رقم خدمة العملاء</p>
+            <p>920011151 </p>
+          </div>
+          <div class="application">
+            <div class="app-img">
+              <span><img src="./assets/images/Icon awesome-apple.png" alt=""></span>
+              <span><img src="./assets/images/Icon awesome-google-play.png" alt=""></span>
+              <span><img src="./assets/images/huawei.png" alt=""></span>
+            </div>
+            <h6>حمل التطبيق الأن</h6>
+          </div>
+        </div>
       </div>
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -87,10 +123,103 @@
   <!-- Slider main container -->
 
 
+  <!-- latest news -->
+  <div class="latest-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-2">
+          <div class="latest-head">
+            <h6>المركز الاعلامي</h6>
+            <h5>أحدث أخبار الشركة</h5>
+            <a href="">
+              <span>المزيد</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-10">
+          <div class="latest-news-slider" dir="ltr">
+            <div class="slider-item">
+              <a href="#" class="news-card">
+                <div class="card-img" style="background-image: url('./assets/images/news-1.png');">
+                  <div class="card-body">
+                    <div class="circleMouse"></div>
+                    <h6 class="card-date">‏29 أبريل، 2021</h6>
+                    <h5 class="card-title">مهارة توافق على صرف أكثر من 4 ملايين ريال مكافآت وتعويضات لمجلس الإدارة</h5>
+                  </div>
+                  <div class="circle-parent">
+                    <div class="circle"></div>
+                    <div class="arrow">
+                      <i class="fas fa-arrow-left"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="#" class="news-card">
+                <div class="card-img" style="background-image: url('./assets/images/news-3.png');">
+                  <div class="card-body">
+                    <div class="circleMouse"></div>
+                    <h6 class="card-date">‏29 أبريل، 2021</h6>
+                    <h5 class="card-title">مهارة توافق على صرف أكثر من 4 ملايين ريال مكافآت وتعويضات لمجلس الإدارة</h5>
+                  </div>
+                  <div class="circle-parent">
+                    <div class="circle"></div>
+                    <div class="arrow">
+                      <i class="fas fa-arrow-left"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="#" class="news-card">
+                <div class="card-img" style="background-image: url('./assets/images/news-4.png');">
+                  <div class="card-body">
+                    <div class="circleMouse"></div>
+                    <h6 class="card-date">‏29 أبريل، 2021</h6>
+                    <h5 class="card-title">مهارة توافق على صرف أكثر من 4 ملايين ريال مكافآت وتعويضات لمجلس الإدارة</h5>
+                  </div>
+                  <div class="circle-parent">
+                    <div class="circle"></div>
+                    <div class="arrow">
+                      <i class="fas fa-arrow-left"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="#" class="news-card">
+                <div class="card-img" style="background-image: url('./assets/images/news-4.png');">
+                  <div class="card-body">
+                    <div class="circleMouse"></div>
+                    <h6 class="card-date">‏29 أبريل، 2021</h6>
+                    <h5 class="card-title">مهارة توافق على صرف أكثر من 4 ملايين ريال مكافآت وتعويضات لمجلس الإدارة</h5>
+                  </div>
+                  <div class="circle-parent">
+                    <div class="circle"></div>
+                    <div class="arrow">
+                      <i class="fas fa-arrow-left"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/swiper.min.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
