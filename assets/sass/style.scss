@@ -176,7 +176,7 @@ button {
   top: 0;
   z-index: 99;
   width: 100%;
-  padding-top: 44px;
+  padding-top: 24px;
   .logo {
     position: absolute;
     right: 60px;
@@ -295,7 +295,7 @@ button {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 95px;
+        top: 100px;
         left: 24px;
         z-index: 9999;
         .links {
@@ -621,7 +621,7 @@ button {
       // display: flex;
       bottom: -300px;
       z-index: 1000;
-
+      // border: 1px solid #000;
       .circle {
         // display: block;
         position: relative;
@@ -648,14 +648,14 @@ button {
         border-radius: 50%;
         background-color: #fff;
         position: absolute;
-        top: -20px;
+        top: 0;
         left: 50%;
         z-index: 1000;
-        // opacity: 0;
-        // visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
         transform: translate(-50%, 0) scale(0.5);
-        transition: all 0.3s ease-in-out !important;
-        transition-delay: 0.5 !important;
+        transition: all 0.3s ease-in-out .6s !important;
+        // transition-delay: 0.5 !important;
       }
     }
     .card-body {
@@ -672,8 +672,8 @@ button {
         // display: none;
         visibility: hidden;
         opacity: 0;
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         background-color: $mainColor;
         border: 20px solid #f0e9e2;
         border-radius: 50%;
@@ -690,7 +690,7 @@ button {
       margin-bottom: 10px;
       font-weight: normal;
       position: relative;
-      z-index: 9;
+      z-index: 99;
     }
     .card-title {
       font-size: 18px;
@@ -700,7 +700,7 @@ button {
       line-height: 30px;
       transition: all 0.5s ease-in-out;
       position: relative;
-      z-index: 9;
+      z-index: 99;
     }
   }
   &:hover {
