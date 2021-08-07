@@ -102,8 +102,14 @@ $(document).ready(function () {
   }
 
   if ($(".news-card").length) {
-
+    $('.news-card .card-body').mousemove(function(e){
+      $(this).find('.circleMouse').css({
+        left: e.offsetX,
+        top: e.offsetY
+      })
+    })
   }
+
 });
 
 function openNav() {

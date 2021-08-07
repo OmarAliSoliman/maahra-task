@@ -665,7 +665,7 @@ button {
       overflow: hidden;
       transition: all 0.5s ease-in-out;
       .circleMouse {
-        display: none;
+        // display: none;
         width: 150px;
         height: 150px;
         background-color: $mainColor;
@@ -675,6 +675,8 @@ button {
         top: 0;
         left: 0;
         opacity: 0.4;
+        z-index: 99;
+        // transition: all .1s ease-in-out;
       }
     }
     .card-date {

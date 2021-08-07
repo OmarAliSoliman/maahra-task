@@ -616,7 +616,6 @@ button {
   transition: all 0.5s ease-in-out;
 }
 .news-card .card-img .card-body .circleMouse {
-  display: none;
   width: 150px;
   height: 150px;
   background-color: #a68049;
@@ -626,6 +625,7 @@ button {
   top: 0;
   left: 0;
   opacity: 0.4;
+  z-index: 99;
 }
 .news-card .card-img .card-date {
   color: #a68049;
